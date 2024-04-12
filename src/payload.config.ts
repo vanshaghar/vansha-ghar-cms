@@ -10,6 +10,7 @@ import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
 
 import Users from './collections/Users'
 import { Media } from './collections/Media'
+import { Category } from './collections/Category'
 
 export default buildConfig({
   admin: {
@@ -17,7 +18,7 @@ export default buildConfig({
     bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [Users,Media],
+  collections: [Users,Media,Category],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
