@@ -6,12 +6,6 @@ export const Menu: CollectionConfig = {
     singular: "Menu",
     plural: "Menus"
   },
-  access: {
-    create: () => true,
-    read: () => true,
-    update: () => true,
-    delete: () => true
-  },
   fields: [
     {
       name: "name",

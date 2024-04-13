@@ -9,12 +9,6 @@ export const Category: CollectionConfig = {
   admin: {
     useAsTitle: "name"
   },
-  access: {
-    create: () => true,
-    read: () => true,
-    update: () => true,
-    delete: () => true
-  },
   fields: [
     {
       name: "name",

@@ -9,12 +9,6 @@ export const FoodType: CollectionConfig = {
   admin: {
     useAsTitle: "type"
   },
-  access: {
-    create: () => true,
-    read: () => true,
-    update: () => true,
-    delete: () => true
-  },
   fields: [
     {
       name: "type",
