@@ -6,6 +6,9 @@ export const Category: CollectionConfig = {
     singular: "Category",
     plural: "Categories"
   },
+  access: {
+    read: () => true
+  },
   admin: {
     useAsTitle: "name"
   },

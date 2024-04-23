@@ -2,10 +2,14 @@ import { CollectionConfig } from "payload/types";
 
 export const Menu: CollectionConfig = {
   slug: "menu",
+  access: {
+    read: () => true
+  },
   labels: {
     singular: "Menu",
     plural: "Menus"
   },
+
   fields: [
     {
       name: "name",
