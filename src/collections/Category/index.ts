@@ -35,6 +35,13 @@ export const Category: CollectionConfig = {
       label: "Parent Category",
       type: "relationship",
       relationTo: "category"
+    },
+    {
+      name: "index",
+      label: "Index",
+      type: "number",
+      required: true,
+      unique: true,
     }
   ]
 };
