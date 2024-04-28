@@ -5,6 +5,9 @@ export const Menu: CollectionConfig = {
   access: {
     read: () => true
   },
+  admin: {
+    useAsTitle: "name"
+  },
   labels: {
     singular: "Menu",
     plural: "Menus"
