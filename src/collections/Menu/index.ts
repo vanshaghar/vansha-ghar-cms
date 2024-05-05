@@ -37,8 +37,7 @@ export const Menu: CollectionConfig = {
     {
       name: "price",
       label: "Price",
-      type: "number",
-      required: true
+      type: "number"
     },
     {
       name: "image",
