@@ -16,13 +16,14 @@ import { FoodType } from "./collections/FoodType";
 import { Menu } from "./collections/Menu";
 import { OrganizedMenu } from "./collections/OrganizedMenu/OrganizedMenu";
 import { Blogs } from "./collections/Blog";
+import { Reviews } from "./collections/Reviews";
 export default buildConfig({
   admin: {
     user: Users.slug,
     bundler: webpackBundler()
   },
   editor: slateEditor({}),
-  collections: [Users, Media, FoodType, Category, Menu, OrganizedMenu, BlogCategory, Blogs],
+  collections: [Users, Media, FoodType, Category, Menu, OrganizedMenu, BlogCategory, Blogs, Reviews],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts")
   },
