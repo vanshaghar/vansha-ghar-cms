@@ -11,16 +11,18 @@ import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
 import Users from "./collections/Users";
 import { Media } from "./collections/Media";
 import { Category } from "./collections/Category";
+import { BlogCategory } from "./collections/BlogCategory";
 import { FoodType } from "./collections/FoodType";
 import { Menu } from "./collections/Menu";
 import { OrganizedMenu } from "./collections/OrganizedMenu/OrganizedMenu";
+import { Blogs } from "./collections/Blog";
 export default buildConfig({
   admin: {
     user: Users.slug,
     bundler: webpackBundler()
   },
   editor: slateEditor({}),
-  collections: [Users, Media, FoodType, Category, Menu, OrganizedMenu],
+  collections: [Users, Media, FoodType, Category, Menu, OrganizedMenu, BlogCategory, Blogs],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts")
   },
