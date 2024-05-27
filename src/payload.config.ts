@@ -19,13 +19,27 @@ import { Blogs } from "./collections/Blog";
 import { Reviews } from "./collections/Reviews";
 import { Featured } from "./collections/Featured";
 import { Gallery } from "./collections/Gallery";
+import { Popup } from "./collections/Popup";
 export default buildConfig({
   admin: {
     user: Users.slug,
     bundler: webpackBundler()
   },
   editor: slateEditor({}),
-  collections: [Users, Media, FoodType, Category, Menu, OrganizedMenu, Featured, Gallery, BlogCategory, Blogs, Reviews],
+  collections: [
+    Users,
+    Media,
+    Popup,
+    FoodType,
+    Category,
+    Menu,
+    OrganizedMenu,
+    Featured,
+    Gallery,
+    BlogCategory,
+    Blogs,
+    Reviews
+  ],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts")
   },
