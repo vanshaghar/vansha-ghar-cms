@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import { afterChangeHook } from "../../lib/webhook";
 
 export const Gallery: CollectionConfig = {
   slug: "gallery",
@@ -32,5 +33,8 @@ export const Gallery: CollectionConfig = {
         }
       ]
     }
-  ]
+  ],
+  hooks: {
+    afterChange: [afterChangeHook]
+  }
 };

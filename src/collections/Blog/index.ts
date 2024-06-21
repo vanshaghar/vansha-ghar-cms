@@ -1,6 +1,7 @@
 import { CollectionConfig } from "payload/types";
 import { HTMLConverterFeature, lexicalEditor, lexicalHTML } from "@payloadcms/richtext-lexical";
 import { addReadTime } from "./hooks/addReadTime";
+import { afterChangeHook } from "../../lib/webhook";
 
 const Blogs: CollectionConfig = {
   slug: "blogs",
@@ -140,7 +141,7 @@ const Blogs: CollectionConfig = {
     lexicalHTML("content", { name: "content_html" })
   ],
   hooks: {
-    afterRead: [],
+    afterChange: [afterChangeHook],
     beforeChange: [addReadTime]
   }
 };

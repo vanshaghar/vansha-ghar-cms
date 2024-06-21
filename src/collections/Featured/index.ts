@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import { afterChangeHook } from "../../lib/webhook";
 
 export const Featured: CollectionConfig = {
   slug: "featured",
@@ -26,5 +27,8 @@ export const Featured: CollectionConfig = {
       type: "relationship",
       relationTo: "media"
     }
-  ]
+  ],
+  hooks: {
+    afterChange: [afterChangeHook]
+  }
 };

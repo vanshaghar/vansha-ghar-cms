@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import { afterChangeHook } from "../../lib/webhook";
 
 export const BlogCategory: CollectionConfig = {
   slug: "blogcategory",
@@ -30,5 +31,8 @@ export const BlogCategory: CollectionConfig = {
       label: "Description",
       type: "textarea"
     }
-  ]
+  ],
+  hooks: {
+    afterChange: [afterChangeHook]
+  }
 };

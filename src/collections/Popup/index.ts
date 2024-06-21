@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import { afterChangeHook } from "../../lib/webhook";
 
 export const Popup: CollectionConfig = {
   slug: "popup",
@@ -40,5 +41,8 @@ export const Popup: CollectionConfig = {
         position: "sidebar"
       }
     }
-  ]
+  ],
+  hooks: {
+    afterChange: [afterChangeHook]
+  }
 };

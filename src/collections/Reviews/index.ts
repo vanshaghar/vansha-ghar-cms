@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import { afterChangeHook } from "../../lib/webhook";
 
 const Reviews: CollectionConfig = {
   slug: "reviews",
@@ -107,7 +108,10 @@ const Reviews: CollectionConfig = {
       label: "Review",
       required: true
     }
-  ]
+  ],
+  hooks: {
+    afterChange: [afterChangeHook]
+  }
 };
 
 export { Reviews };

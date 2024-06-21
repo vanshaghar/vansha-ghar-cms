@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import { afterChangeHook } from "../../lib/webhook";
 
 export const Menu: CollectionConfig = {
   slug: "menu",
@@ -57,5 +58,8 @@ export const Menu: CollectionConfig = {
       type: "textarea",
       label: "Ingredients"
     }
-  ]
+  ],
+  hooks: {
+    afterChange: [afterChangeHook]
+  }
 };

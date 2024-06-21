@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import { afterChangeHook } from "../../lib/webhook";
 
 export const Category: CollectionConfig = {
   slug: "category",
@@ -41,7 +42,10 @@ export const Category: CollectionConfig = {
       label: "Index",
       type: "number",
       required: true,
-      unique: true,
+      unique: true
     }
-  ]
+  ],
+  hooks: {
+    afterChange: [afterChangeHook]
+  }
 };

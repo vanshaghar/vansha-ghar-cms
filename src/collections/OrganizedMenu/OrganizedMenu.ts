@@ -1,5 +1,6 @@
 import { CollectionConfig } from "payload/types";
 import { useForm } from "payload/components/forms";
+import { afterChangeHook } from "../../lib/webhook";
 
 export const OrganizedMenu: CollectionConfig = {
   slug: "organized-menu",
@@ -47,5 +48,8 @@ export const OrganizedMenu: CollectionConfig = {
         }
       ]
     }
-  ]
+  ],
+  hooks: {
+    afterChange: [afterChangeHook]
+  }
 };

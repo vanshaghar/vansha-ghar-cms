@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import { afterChangeHook } from "../../lib/webhook";
 
 export const FoodType: CollectionConfig = {
   slug: "food-type",
@@ -26,5 +27,8 @@ export const FoodType: CollectionConfig = {
       type: "text",
       required: true
     }
-  ]
+  ],
+  hooks: {
+    afterChange: [afterChangeHook]
+  }
 };
