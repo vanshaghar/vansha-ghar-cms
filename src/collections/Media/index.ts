@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import { APIError, FileUploadError } from "payload/errors";
 
 export const Media: CollectionConfig = {
   slug: "media",
@@ -9,10 +10,26 @@ export const Media: CollectionConfig = {
   access: {
     read: () => true
   },
+
   fields: [
     {
       name: "alt",
-      type: "text"
+      type: "text",
+      admin: {
+        description: "Max image size 500kb"
+      }
     }
-  ]
+  ],
+  hooks: {
+    beforeValidate: [
+      (req) => {
+        const image = req.data;
+        // Make sure uploaded image is big enough
+        if (image && image.filesize && image.filesize > 500000) {
+          throw new FileUploadError();
+        }
+        return req;
+      }
+    ]
+  }
 };
