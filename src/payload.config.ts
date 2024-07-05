@@ -20,6 +20,7 @@ import { Reviews } from "./collections/Reviews";
 import { Featured } from "./collections/Featured";
 import { Gallery } from "./collections/Gallery";
 import { Popup } from "./collections/Popup";
+import { MenuImage } from "./collections/MenuImage";
 export default buildConfig({
   admin: {
     user: Users.slug,
@@ -34,6 +35,7 @@ export default buildConfig({
     Category,
     Menu,
     OrganizedMenu,
+    MenuImage,
     Featured,
     Gallery,
     BlogCategory,

@@ -21,15 +21,15 @@ export const Media: CollectionConfig = {
     }
   ],
   hooks: {
-    beforeValidate: [
-      (req) => {
-        const image = req.data;
-        // Make sure uploaded image is big enough
-        if (image && image.filesize && image.filesize > 500000) {
-          throw new FileUploadError();
-        }
-        return req;
-      }
-    ]
+    // beforeValidate: [
+    //   (req) => {
+    //     const image = req.data;
+    //     // Make sure uploaded image is big enough
+    //     if (image && image.filesize && image.filesize > 500000) {
+    //       throw new FileUploadError();
+    //     }
+    //     return req;
+    //   }
+    // ]
   }
 };
