@@ -4,7 +4,7 @@ import { APIError, FileUploadError } from "payload/errors";
 export const Media: CollectionConfig = {
   slug: "media",
   upload: {
-    staticURL: "https://spydogenesis.s3.ap-south-1.amazonaws.com/vanshaghar",
+    staticURL: "https://vanshaghar.s3.me-central-1.amazonaws.com/payload",
     mimeTypes: ["image/*"]
   },
   access: {
